@@ -1,0 +1,22 @@
+@import '@/assets/sass/common.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        min-width: 375px;
+    }
+}
+
+@layer utilities {
+    .fade-enter-active,
+    .fade-leave-active {
+        transition: opacity .2s ease;
+    }
+    .fade-enter-from,
+    .fade-leave-to {
+        opacity: 0;
+    }
+}
