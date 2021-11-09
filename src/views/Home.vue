@@ -24,7 +24,6 @@
 import { ref, computed, onMounted } from 'vue';
 import { useStore } from 'vuex';
 import L from 'leaflet';
-import '../../node_modules/leaflet/dist/leaflet.css';
 
 export default {
     setup () {
