@@ -2,8 +2,8 @@ import { createStore } from 'vuex';
 import axios from 'axios';
 
 const GetAuthorizationHeader = () => {
-    const AppID = '10010991a4f6468a9fb9430c27c1c85a';
-    const AppKey = 'jhdbt1WvnqsGKO32uNl8BD3lPQk';
+    const AppID = import.meta.env.VITE_TDX_APP_ID;
+    const AppKey = import.meta.env.VITE_TDX_APP_KEY;
 
     const GMTString = new Date().toGMTString();
     const ShaObj = new jsSHA('SHA-1', 'TEXT');
