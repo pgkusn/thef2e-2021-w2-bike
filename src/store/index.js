@@ -25,8 +25,8 @@ const GetAuthorizationHeader = () => {
 
 const mainAPI = axios.create({
     method: 'get',
-    baseURL: 'https://ptx.transportdata.tw/MOTC/v2/Bike/',
-    headers: GetAuthorizationHeader()
+    baseURL: `${import.meta.env.VITE_API_URL}/MOTC/v2/Bike/`,
+    headers: import.meta.env.PROD ? GetAuthorizationHeader() : ''
 });
 
 export default createStore({

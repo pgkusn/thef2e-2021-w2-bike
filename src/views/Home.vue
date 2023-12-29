@@ -35,8 +35,10 @@ export default {
         const initMap = () => {
             const { latitude, longitude } = currentPosition.value;
             map = L.map('map').setView([latitude, longitude], 15);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                attribution: '© <a href="https://www.mapbox.com/about/maps/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> <strong><a href="https://www.mapbox.com/map-feedback/" target="_blank">Improve this map</a></strong>',
+                id: 'mapbox/streets-v12',
+                accessToken: 'pk.eyJ1Ijoia2VuZ2UiLCJhIjoiY2t2MXJrYnR2NmhrODJ1cGh2eTRkazI1ZyJ9.pqYkFcEIt26bKYaUSuZYmA'
             }).addTo(map);
         };
 
